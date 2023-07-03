@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+	<!-- and it's easy to individually load additional languages -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/go.min.js"></script>
+
+	<script src="tofile.js"></script>
+	<script src="graph.js"></script>
+	<script src="fromfile.js"></script>
+	<script src="ui.js"></script>
+	<script src="test.js"></script>
+
+
+
+</head>
+<body bgcolor="#000000" style="color:#FFFFFF">
+<div id="textentry"></div>
+<form >
+  <p><label for="noteentry"></label></p>
+  <textarea hidden="true" id="currentnote" rows="40" cols="160">your notes (escape to exit and save.)</textarea>
+  <br>
+</form>
+<div style="margin-left: 350px; margin-right: 350px;" id="mathjaxdsp" hidden="true"></div>
+<canvas id="canvas"></canvas>
+<input type="file" id="parse">
+<br>
+<p id="outputbx"></p>
+<button id="submit" onclick="writefile()"> save file</button>
+</body>
+</html>
